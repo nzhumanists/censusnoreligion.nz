@@ -343,55 +343,61 @@
 
 
     <div class="row">
-      <h2>Get Active</h2>
-      <div>
+      <div class="five columns">
+        <h2>Get Active</h2>
         <ul>
           <li>Tell your friends</li>
           <li>Promote on social media</li>
           <li>Donate to the Humanists</li>
         </ul>
-        <div>
-        </div>
+      </div>
+      <div class="one column"> &nbsp; </div>
+      <div class="five columns">
+        <a class="twitter-timeline" href="https://twitter.com/NZCensus2018?ref_src=twsrc%5Etfw">Tweets by NZCensus2018</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
 
-        <script>
-          if (document.querySelectorAll) {
-            // add expand collapse sections
-            var h3sNl = document.querySelectorAll("h3");
-            var h3s = Array.prototype.slice.call(h3sNl);
-            if (h3s.map) {
-              h3s.map(function (h3, index) {
-                h3.className += ' toggle';
+    <script>
+      if (document.querySelectorAll) {
+        // add expand collapse sections
+        var h3sNl = document.querySelectorAll("h3");
+        var h3s = Array.prototype.slice.call(h3sNl);
+        if (h3s.map) {
+          h3s.map(function (h3, index) {
+            h3.className += ' toggle';
 
-                var checkbox = document.createElement('input');
-                checkbox.setAttribute('type', 'checkbox');
-                checkbox.setAttribute('id', 'h3' + index);
-                checkbox.setAttribute('title', h3.innerText);
+            var checkbox = document.createElement('input');
+            checkbox.setAttribute('type', 'checkbox');
+            checkbox.setAttribute('id', 'h3' + index);
+            checkbox.setAttribute('title', h3.innerText);
 
-                checkbox.className += ' toggle';
-                h3.parentNode.insertBefore(checkbox, h3);
+            checkbox.className += ' toggle';
+            h3.parentNode.insertBefore(checkbox, h3);
 
-                var h3Children = Array.prototype.slice.call(h3.childNodes);
-                var label = document.createElement('label');
-                label.className += ' toggle';
-                label.htmlFor = 'h3' + index;
-                h3.appendChild(label);
-                while (h3Children.length) {
-                  label.appendChild(h3Children.pop())
-                }
-              });
+            var h3Children = Array.prototype.slice.call(h3.childNodes);
+            var label = document.createElement('label');
+            label.className += ' toggle';
+            label.htmlFor = 'h3' + index;
+            h3.appendChild(label);
+            while (h3Children.length) {
+              label.appendChild(h3Children.pop())
             }
+          });
+        }
 
-            // make all hyperlinks open in new windows
-            var asNl = document.querySelectorAll("a");
-            var as = Array.prototype.slice.call(asNl);
-            if (as.map) {
-              as.map(function (a) {
-                a.setAttribute("rel", "noreferrer");
-                a.setAttribute("target", "_blank");
-              });
-            }
-          }
-        </script>
+        // make all hyperlinks open in new windows
+        var asNl = document.querySelectorAll("a");
+        var as = Array.prototype.slice.call(asNl);
+        if (as.map) {
+          as.map(function (a) {
+            a.setAttribute("rel", "noreferrer");
+            a.setAttribute("target", "_blank");
+          });
+        }
+      }
+    </script>
+
 
 </body>
 
