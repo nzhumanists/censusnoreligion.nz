@@ -1,0 +1,4 @@
+[data-carousel] {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
