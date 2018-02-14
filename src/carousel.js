@@ -5,7 +5,7 @@ import "./carousel.css";
 export default ({ images }) => (
   <CoverFlow
     imagesArr={images}
-    height={800}
+    height={600}
     background={"#eee"}
     itemRatio="566:800"
   />
