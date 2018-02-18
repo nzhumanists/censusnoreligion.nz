@@ -1,5 +1,5 @@
 import React from "react";
-import CoverFlow from "coverflow-react";
+import CoverFlow from "./coverflow-react";
 import "./carousel.css";
 
 export default ({ images }) => (

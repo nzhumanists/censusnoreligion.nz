@@ -11,6 +11,7 @@
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta property="og:image" content="%PUBLIC_URL%/census-question-16.png" /> .
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -20,7 +21,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>Select 'No religion' in the Census</title>
+  <title>Mark 'No religion' in the Census</title>
   <style>
     body {
       font-family: Helvetica, Ubuntu, sans-serif;
@@ -28,10 +29,18 @@
     }
 
     h1 {
-      padding: 1rem 0px;
+      padding: 2rem 0px 1rem;
+      font-size: 50px;
+      text-align: center;
+      font-weight: 900;
+      font-family: sans-serif;
+      color: #555;
     }
 
-    h1,
+    h1 img {
+      vertical-align: middle;
+    }
+
     h2,
     h3,
     h4,
@@ -109,6 +118,62 @@
     ul.active li {
       margin: 1rem 0px;
     }
+
+    #mc_embed_signup {
+      clear: left;
+      font: 14px Helvetica, Arial, sans-serif;
+      position: fixed;
+      bottom: -20%;
+      right: 1%;
+      padding: 5px 10px;
+      border-radius: 3px;
+      opacity: 0.5;
+    }
+
+    #mc_embed_signup.mce-open {
+      bottom: 1%;
+      transition: bottom 1s;
+    }
+
+    .mce {
+      background: #005599;
+      color: white;
+
+    }
+
+    .mce-title {
+      font-size: large;
+      padding: 0.8rem 0px;
+    }
+
+    .mce-row {
+      padding: 0.5rem 0px;
+    }
+
+    .mce-row input {
+      width: 10em;
+    }
+
+    .mce-label {
+      display: inline-block;
+      width: 8em;
+    }
+
+    #mce-close {
+      position: Absolute;
+      right: 1%;
+      top: 5%;
+      background: transparent;
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border: none;
+      text-align: center;
+      padding: 0px;
+      color: white;
+      font-weight: bold;
+      cursor: crosshair
+    }
   </style>
 </head>
 
@@ -131,7 +196,8 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns">
-        <h1>Select 'No religion' In The Census</h1>
+        <h1>Mark
+          <img src="%PUBLIC_URL%/mark-no-religion.png" width="254" alt="No Religion"> In The Census</h1>
       </div>
     </div>
   </div>
@@ -386,6 +452,9 @@
           <a href="http://rationalists.nz/">The New Zealand Association of Rationalists &amp; Humanists</a>, a not-for-profit organisation that exists to serve
           the interests of the non-religious; those who do not have a belief in gods or the supernatural.
         </p>
+
+
+        <!--End mc_embed_signup-->
       </div>
       <div class=" two columns "> &nbsp; </div>
       <div class="five columns ">
@@ -393,46 +462,102 @@
         <script async src="https://platform.twitter.com/widgets.js " charset="utf-8 "></script>
       </div>
     </div>
+  </div>
 
-    <script>
-      if (document.querySelectorAll) {
-        // add expand collapse sections
-        var h3sNl = document.querySelectorAll("h3 ");
-        var h3s = Array.prototype.slice.call(h3sNl);
-        if (h3s.map) {
-          h3s.map(function (h3, index) {
-            h3.className += ' toggle';
+  <div id="mc_embed_signup" class="mce">
+    <form action="https://humanist.us11.list-manage.com/subscribe/post?u=916c739aa825e63a0fe308f87&amp;id=e488a94ec7" method="post"
+      name="mc-embedded-subscribe-form" target="_blank" novalidate>
+      <div>
+        <div class="mce-title">Subscribe to our newsletter</div>
 
-            var checkbox = document.createElement('input');
-            checkbox.setAttribute('type', 'checkbox');
-            checkbox.setAttribute('id', 'h3' + index);
-            checkbox.setAttribute('title', h3.innerText);
+        <button id="mce-close" type="button" title="Close this window">X</button>
 
-            checkbox.className += ' toggle';
-            h3.parentNode.insertBefore(checkbox, h3);
+        <div class="mce-row">
+          <label for="mce-EMAIL" class="mce-label">Email Address </label>
+          <input type="email" value="" name="EMAIL" required class="required email" id="mce-EMAIL">
+        </div>
+        <div class="mce-row">
+          <label class="mce-label" for="mce-FNAME">First Name </label>
+          <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+        </div>
+        <div class="mce-row">
+          <label class="mce-label" for="mce-LNAME">Last Name </label>
+          <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_916c739aa825e63a0fe308f87_e488a94ec7" tabindex="-1" value="">
+        </div>
+        <div style="text-align:right">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="font-weight:bold">
+        </div>
+      </div>
+    </form>
+  </div>
 
-            var h3Children = Array.prototype.slice.call(h3.childNodes);
-            var label = document.createElement('label');
-            label.className += ' toggle';
-            label.htmlFor = 'h3' + index;
-            h3.appendChild(label);
-            while (h3Children.length) {
-              label.appendChild(h3Children.pop())
-            }
-          });
-        }
 
-        // make all hyperlinks open in new windows
-        var asNl = document.querySelectorAll("a ");
-        var as = Array.prototype.slice.call(asNl);
-        if (as.map) {
-          as.map(function (a) {
-            a.setAttribute("rel ", "noreferrer ");
-            a.setAttribute("target ", "_blank ");
-          });
-        }
+  <script>
+    if (document.querySelectorAll) {
+      // add expand collapse sections
+      var h3sNl = document.querySelectorAll("h3 ");
+      var h3s = Array.prototype.slice.call(h3sNl);
+      if (h3s.map) {
+        h3s.map(function (h3, index) {
+          h3.className += ' toggle';
+
+          var checkbox = document.createElement('input');
+          checkbox.setAttribute('type', 'checkbox');
+          checkbox.setAttribute('id', 'h3' + index);
+          checkbox.setAttribute('title', h3.innerText);
+
+          checkbox.className += ' toggle';
+          h3.parentNode.insertBefore(checkbox, h3);
+
+          var h3Children = Array.prototype.slice.call(h3.childNodes);
+          var label = document.createElement('label');
+          label.className += ' toggle';
+          label.htmlFor = 'h3' + index;
+          h3.appendChild(label);
+          while (h3Children.length) {
+            label.appendChild(h3Children.pop())
+          }
+        });
       }
-    </script>
+
+      // make all hyperlinks open in new windows
+      var asNl = document.querySelectorAll("a ");
+      var as = Array.prototype.slice.call(asNl);
+      if (as.map) {
+        as.map(function (a) {
+          a.setAttribute("rel", "noreferrer");
+          a.setAttribute("target", "_blank");
+        });
+      }
+    }
+
+    setTimeout(function () {
+      var box = document.getElementById("mc_embed_signup");
+      console.log('box', box);
+      if (box) {
+        box.className += " mce-open";
+      }
+    }, 5000);
+
+
+    var closeButton = document.getElementById("mce-close");
+    closeButton.addEventListener("click", function () {
+      var box = document.getElementById("mc_embed_signup");
+      if (box) {
+        box.className = box.className.replace(/ mce-open/gi, '');
+      }
+    })
+
+
+  </script>
 
 
 </body>
